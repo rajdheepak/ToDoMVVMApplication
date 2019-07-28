@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph_todo"
+            app:startDestination="@id/todoListingFragment">
+
+    <fragment android:id="@+id/addTodoFragment"
+              android:name="com.dheepak.todomvvmapplicationtest.View.AddTodoFragment"
+              android:label="Add Todo"
+              tools:layout="@layout/fragment_add_todo"/>
+    <fragment android:id="@+id/todoListingFragment"
+              android:name="com.dheepak.todomvvmapplicationtest.View.TodoListingFragment"
+              android:label="Todo"
+              tools:layout="@layout/fragment_todo_listing">
+        <action android:id="@+id/action_todoListingFragment_to_addTodoFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_enter_anim"
+                app:popExitAnim="@anim/nav_default_exit_anim"
+                app:destination="@id/addTodoFragment"/>
+    </fragment>
+</navigation>
